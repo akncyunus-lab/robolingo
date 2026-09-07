@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#69c9ff">
+<title>RoboLingo - Your English Buddy!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="topbar">
+    <button class="back-btn" id="backHome" aria-label="Ana sayfa">‹</button>
+    <div class="brand"><div class="brand-icon">🤖</div><div><h1>Robo<span>Lingo</span></h1><p>Your English Buddy!</p></div></div>
+    <div class="stats"><div class="stat">⭐ <b id="stars">12</b></div><div class="stat">🔥 <b id="streak">5</b></div></div>
+  </header>
+
+  <div id="homeView">
+    <section class="hero">
+      <div class="hero-robo"><img src="assets/robo.png" alt="Robo"></div>
+      <div class="hero-card"><h2>Hi! I'm Robo! 👋</h2><p>Let's learn English<br>together!</p><button id="startBtn">Let's Learn 🚀</button></div>
+    </section>
+    <section class="quick-grid">
+      <button class="feature learn" data-section="Dersler"><span>📖</span><strong>Learn</strong><small>Derslerle öğren</small><i>›</i></button>
+      <button class="feature speak" data-section="Konuşma"><span>💬</span><strong>Speak</strong><small>Konuşma pratiği yap</small><i>›</i></button>
+      <button class="feature play" data-section="Oyunlar"><span>🎮</span><strong>Play</strong><small>Oyunlarla pekiştir</small><i>›</i></button>
+      <button class="feature progress" data-section="İlerlemem"><span>⭐</span><strong>My Progress</strong><small>İlerlemeni gör</small><i>›</i></button>
+    </section>
+    <section class="lessons"><div class="section-title"><h2>Popüler Dersler</h2><button id="allLessons">Tüm Dersleri Gör ›</button></div>
+      <div class="lesson-row">
+        <button class="lesson" data-lesson="Hello!"><span>👋</span><b>Hello!</b><small>0 / 7 ⭐</small></button>
+        <button class="lesson" data-lesson="Numbers"><span>🔢</span><b>Numbers</b><small>0 / 10 ⭐</small></button>
+        <button class="lesson" data-lesson="Animals"><span>🐱</span><b>Animals</b><small>0 / 10 ⭐</small></button>
+        <button class="lesson" data-lesson="Colors"><span>🎨</span><b>Colors</b><small>0 / 8 ⭐</small></button>
+      </div>
+    </section>
+  </div>
+
+  <section id="lessonsView" class="screen-view hidden">
+    <div class="page-title"><div><span class="eyebrow">🤖 Robo ile öğren</span><h2>Dersler</h2><p>Haydi, İngilizce dünyasını birlikte keşfedelim!</p></div><img src="assets/robo.png" alt="Robo"></div>
+    <div class="level-card"><div><b>Başlangıç Seviyesi</b><span>Çocuklar için kolay ve eğlenceli</span></div><span>🌟</span></div>
+    <div class="course-grid">
+      <button class="course" data-lesson="Hello!"><span>👋</span><div><b>Hello!</b><small>Selamlaşma • 7 kelime</small></div><em>0/7 ›</em></button>
+      <button class="course" data-lesson="Numbers"><span>🔢</span><div><b>Numbers</b><small>Sayılar • 10 kelime</small></div><em>0/10 ›</em></button>
+      <button class="course" data-lesson="Colors"><span>🎨</span><div><b>Colors</b><small>Renkler • 8 kelime</small></div><em>0/8 ›</em></button>
+      <button class="course" data-lesson="Animals"><span>🐶</span><div><b>Animals</b><small>Hayvanlar • 10 kelime</small></div><em>0/10 ›</em></button>
+      <button class="course" data-lesson="Food"><span>🍎</span><div><b>Food</b><small>Yiyecekler • 8 kelime</small></div><em>0/8 ›</em></button>
+      <button class="course" data-lesson="Family"><span>👨‍👩‍👧</span><div><b>Family</b><small>Aile • 8 kelime</small></div><em>0/8 ›</em></button>
+    </div>
+  </section>
+
+  <section id="lessonDetail" class="screen-view hidden">
+    <div class="detail-card"><div class="detail-robo"><img src="assets/robo.png" alt="Robo"></div><div><span class="eyebrow">🤖 Robo diyor ki</span><h2 id="detailTitle">Hello!</h2><p id="detailText">İlk İngilizce kelimelerini öğrenmeye hazır mısın?</p></div></div>
+    <div class="word-card"><span id="wordEmoji">👋</span><b id="wordEnglish">Hello</b><small>Merhaba</small><button id="speakWord">🔊 Dinle</button></div>
+    <button class="big-start" id="beginLesson">Derse Başla 🚀</button>
+  </section>
+
+  <nav class="bottom-nav">
+    <button class="active" data-section="Ana Sayfa">⌂<span>Ana Sayfa</span></button>
+    <button data-section="Dersler">▤<span>Dersler</span></button>
+    <button data-section="Konuş">●<span>Konuş</span></button>
+    <button data-section="Oyunlar">🎮<span>Oyunlar</span></button>
+    <button data-section="Başarılar">🏆<span>Başarılar</span></button>
+    <button data-section="Ayarlar">⚙<span>Ayarlar</span></button>
+  </nav>
+</main>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
